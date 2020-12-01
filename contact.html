@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="imgs/email.png"/>
+  <link rel="stylesheet" type="text/css" href="css/style_form.css">
+  <title>Contact Me at A Taste of Cuba</title>
+</head>
+<body>
+  <!-- Insert Formspree.io info here -->
+ <form action="https://formspree.io/f/xgepyrjo" method="POST">
+  <fieldset>
+    <legend>Contact Me - A Taste of Cuba</legend>
+
+    <label for="name_id">Your Name</label>
+    <input type="text"
+            placeholder="Enter Your Name"
+            id = "name_id"
+            name="name" required>
+
+    <label for="email_id">Your Email</label>
+    <input type="email"
+            placeholder="Enter Your Email"
+            id = "email_id"
+            name="email" required>
+
+    <label for="phone_id">Your Phone Number</label>
+    <input type="tel"
+            name="phone"
+            placeholder="123-456-7890"
+            id = "phone_id"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+    <div><span>Phone Format: 123-456-7890</span></div>
+
+    <label for="msg">Leave a Message</label>
+
+    <textarea name="mesg"
+              id = "msg"
+              placeholder="Enter your message"   required></textarea><br>
+
+    <input type="checkbox"
+            name="remember"
+            checked="checked"
+            id = "cBox">
+    <label for ="cBox">Remember me</label>
+
+    <input type="submit" value = "Leave a message">
+  </fieldset>
+ </form>
+ <a href="index.html">Back to A Taste of Cuba</a>
+</body>
+</html>

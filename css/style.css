@@ -1,0 +1,351 @@
+/*---------------Body----------------------*/
+body{
+  font-family: "Lucida Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 10pt;
+  background-color: #b1effc;
+  width: 100%;
+}
+
+h1{
+  font-size: 2em;
+  color: #b86123;
+  text-align: center;
+  line-height: 2;
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px;
+}
+
+h3{
+  font-size: 1em;
+  text-align: center;
+  padding: 3px;
+  color:#b86123;
+}
+
+p {
+  padding: 0 30px;
+}
+
+/*-----------------Navbar-------------------*/
+header{
+  background: #ffffff;
+  border-bottom: 7px solid #A940A1;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav{
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.nav_links{
+  font-family: Georgia, serif;
+  font-size: 14pt;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav_item a:visited{
+    color: #b06102;
+}
+
+.nav_item a:hover, a:active, a:focus{
+  color: #f0af15;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+
+/*------------------SKIP-----------------*/
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+/*----------------SKIP Focus----------------*/
+.skip a:focus{
+  top:20px;
+  color: #ff9900;
+  text-decoration-style: solid;
+  transform: translateY(0%);
+}
+
+*:focus{
+  border: 2px solid #ff9900;
+}
+
+
+/*------------------Grid-----------------*/
+.container{
+  display: grid;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto;
+ max-width: 100%;
+}
+
+/*---------------Header-------------------*/
+header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    background-image: url("../images_big/header_image.png");
+    grid-column: 1 / -1;
+    grid-row: 1 / auto;
+}
+
+header p{
+  color: #f5d442;
+  font-size: 18px;
+  padding: 0;
+  text-align: center;
+  }
+
+/*-----------------div linking----------------*/
+
+.entrantes, .platos, .postres, .bebidas, .extras{
+  grid-column: 2/ span 2;
+}
+
+.describe{
+  grid-column: 2/ span 4;
+}
+
+.intro{
+  grid-column: 2/ span 4;
+}
+
+.entrantes-image, .platos-image, .postres-image, .bebidas-image, .extras-image{
+  /*Your Code Here- don't use overflow- hidden for text*/
+  grid-column: 3/ span 3;
+  max-height: 375px;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.intro{
+    grid-row: 2/ auto;
+}
+
+.entrantes, .entrantes-image{
+   grid-row: 3/ auto;
+}
+
+.platos, .platos-image{
+   grid-row: 4/ auto;
+}
+
+.postres, .postres-image{
+   grid-row: 5/ auto;
+}
+
+.bebidas, .bebidas-image{
+   grid-row: 6/ auto;
+}
+
+.extras, .extras-image{
+   grid-row: 7/ auto;
+}
+
+.describe{
+   grid-row: 8/ auto;
+}
+
+.describe{
+  background-color: rgba(255, 255, 255, 1);
+ border: 2px;
+ border-color: #000000;
+ border-radius: 10px;
+ padding: 15px;
+ align-self: center;
+ vertical-align: middle;
+ text-align: left;
+ margin: auto;
+}
+
+/*-----------------Footer----------------*/
+footer{
+  background-color: #b86123;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  border-top: 7px solid #A940A1;
+  grid-row: 6;
+}
+
+/*---------Keyframes for animation------------*/
+@-webkit-keyframes logo_wiggle{
+  from {width: 25px;}
+  to {width: 75px;}
+}
+
+@keyframes logo_wiggle{
+
+  from {width: 25px;}
+  to {width: 75px;}
+}
+
+#logo{
+   -webkit-animation-name: logo_wiggle;
+   animation-name: logo_wiggle;
+   -webkit-animation-duration: 5s;
+   animation-duration: 5s;
+   -webkit-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+
+/*--------------------Cards!------------------*/
+.menu{
+    min-height: 50px;
+    grid-column: 1/ span2;
+    justify-content: center;
+    align-items: center;
+}
+
+.extras, .bebidas, .postres, .platos, .entrantes{
+    min-height: 50px;
+}
+
+.food-list {
+  margin: 15px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 0 0 0;
+  border: 2px solid #000000;
+
+}
+
+.food-list > header{
+  font-family: Georgia, serif;
+  width: 92%;
+  background: #A940A1;
+  border: 2px solid #A940A1;
+  padding: 15px 15px;
+  border-radius: 0 0 0 0;
+}
+
+.food-list > ul{
+  list-style: none;
+  padding: 10;
+}
+
+.food-list > ul li{
+  width: 89%;
+  margin: 20px auto;
+  text-align: left;
+  padding: 10;
+}
+
+.food-list button{
+  width: 100%;
+  height: 60px;
+  border: 0;
+  margin-left: 0px;
+  border-radius: 0 0 7px 7px;
+  background: #b86123;
+  color: white;
+  font-size: 1.25em;
+}
+
+.food-list h3{
+  font-size: 1.25em;
+  color: #b86123;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.food-list p{
+  font-size: 1em;
+}
+
+.food-list_big{
+  -webkit-transform: initial;
+          transform: initial;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+  #logo{
+    -webkit-animation: none;
+    animation: none;
+  }
+
+/*------------------Media Screen--------------*/
+@media screen and (min-width: 850px){
+/*--------------------Cards!-------------- */
+.card {
+    flex-basis:400px;
+  }
+
+.card_big{
+    -webkit-transform: scaleX(1.12);
+            transform: scaleX(1.12);
+  }
+
+/*----------------Navbar------------------ */
+  nav{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .nav_links{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+/*------------------Media Print----------------*/
+@media print {
+  .card {
+    flex-basis: 200px;
+  }
+
+  body {
+    background-image: none;
+  }
+  .gallery, #gallery{
+    display: none;
+  }
+
+  h2{
+    display: none;
+  }
+}
+
+
+}
+}
